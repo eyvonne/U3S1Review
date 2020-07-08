@@ -4,3 +4,4 @@ contains instructions to build a model of a computer shop inventory system. They
 
 
 # Instructions
+I need to review the instructions after going through this with a few students and will post the updated instructions here once I have done that
