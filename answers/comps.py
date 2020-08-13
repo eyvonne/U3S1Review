@@ -29,12 +29,12 @@ class Computer:
 
 
 class Laptop(Computer):
-    open = False
 
     def __init__(self, ram, cpu, storage, weight,
-                 storageType='SSD'):
-        super().__init__(ram, cpu, storage, storageType)
+                 storageType='SSD', open=False, on=False):
+        super().__init__(ram, cpu, storage, storageType, on=on)
         self.weight = weight
+        self.open = open
 
     def turnOn(self):
         if self.open == False:
