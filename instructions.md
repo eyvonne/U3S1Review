@@ -40,9 +40,9 @@ Add code to the end of your .py file to run it as a script and test that your at
 
 ## Part 2: Lets Get Computing
 
-Computers stats are nice, but we really want to be able to turn them on to do anything. Write two methods:
+Computers stats are nice, but we really want to be able to turn them on to do anything. Add two methods in the class you created in part 1:
 - checks the type of storage and if its an SSD returns 'about 10 seconds' or 'time to go get coffee' otherwise. Stretch: raise a ValueError if the drive isn't a legal type (SSD or HDD)
-- Checks to see if the computer is turned on, and if it isn't calls the function above to estimate how long until its read to go (and sets the computer to on)
+- Turns on the computer: Checks to see if the computer is turned on, and if it isn't calls the function above to estimate how long until its read to go (and sets the computer to on)
 
 Adapt your scripting code to check that the new methods also work
 
@@ -56,7 +56,7 @@ Create a subclass of the Computer you already made and add:
 - add an attribute for whether or not the lid is open- all of your laptops start closed.
 
 Additionally, you're going to need some changes to the methods:
-- now you'll need to check that the lid is open before you turn on the computer
+- now you'll need to check that the lid is open before you turn on the computer (overwrite your method from the base Computer)
 - create a method to open the lid
 
 Stretch: add a *property* which determines the portability based on the weight of the laptop. Should return 'very portable', 'a little portable', and 'not really portable'. Use your judgement to choose what weight thresholds to use for these categories.

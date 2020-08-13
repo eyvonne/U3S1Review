@@ -2,13 +2,13 @@
 
 
 class Computer:
-    on = False
 
-    def __init__(self, ram, cpu, storage, storageType):
+    def __init__(self, ram, cpu, storage, storageType, on=False):
         self.ram = ram
         self.cpu = cpu
         self.storage = storage
         self.storageType = storageType.upper()
+        self.on = on
 
     def __bootTime__(self):
         '''returns the approximate boot Time of the computer'''
@@ -40,12 +40,7 @@ class Laptop(Computer):
         if self.open == False:
             print("you'll need to open the laptop first")
         else:
-            if self.on == True:
-                print('Your Computer is already on')
-            else:
-                print('Powering on now, you have', self.__bootTime__(),
-                      'before it turns on')
-                self.on = True
+            super().turnOn()
 
     def openShell(self):
         if self.open == False:
