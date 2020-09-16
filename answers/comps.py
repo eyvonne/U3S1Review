@@ -10,7 +10,7 @@ class Computer:
         self.storageType = storageType.upper()
         self.on = on
 
-    def __bootTime__(self):
+    def __boot_time__(self):
         '''returns the approximate boot Time of the computer'''
         if self.storageType == 'SSD':
             return 'about 10 seconds'
@@ -19,9 +19,9 @@ class Computer:
         else:
             raise ValueError(f"{self.storageType} is not a recognized drive")
 
-    def turnOn(self):
+    def turn_on(self):
         if self.on == False:
-            print('Powering on now, you have', self.__bootTime__(),
+            print('Powering on now, you have', self.__boot_time__(),
                   'before it turns on')
             self.on = True
         else:
@@ -36,13 +36,13 @@ class Laptop(Computer):
         self.weight = weight
         self.open = open
 
-    def turnOn(self):
+    def turn_on(self):
         if self.open == False:
             print("you'll need to open the laptop first")
         else:
-            super().turnOn()
+            super().turn_on()
 
-    def openShell(self):
+    def open_shell(self):
         if self.open == False:
             print('Opening up the Laptop')
             self.open = True
@@ -52,7 +52,7 @@ class Laptop(Computer):
 
 if __name__ == '__main__':
     base = Computer(1, 4, 52, 'SSD')
-    base.turnOn()
+    base.turn_on()
     base = Laptop(1, 1.6, 50, 2)
-    base.openShell()
-    base.turnOn()
+    base.open_shell()
+    base.turn_on()

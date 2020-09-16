@@ -20,8 +20,8 @@ class ComputerTests(unittest.TestCase):
 
     def test_computer_boot(self):
         '''tests the boot speed of the computer and laptop'''
-        self.assertEqual(self.comp.__bootTime__(), 'time to go make a cup of coffee')
-        self.assertEqual(self.laptop.__bootTime__(), 'about 10 seconds')
+        self.assertEqual(self.comp.__boot_time__(), 'time to go make a cup of coffee')
+        self.assertEqual(self.laptop.__boot_time__(), 'about 10 seconds')
 
     def test_computer_stats(self):
         '''tests that the stats are saved to the computer'''
@@ -33,8 +33,8 @@ class ComputerTests(unittest.TestCase):
 
     def test_turn_on_laptop(self):
         '''this test opens and turns on the laptop and tests that it worked'''
-        self.laptop.openShell()
-        self.laptop.turnOn()
+        self.laptop.open_shell()
+        self.laptop.turn_on()
         self.assertEqual(self.laptop.open, True)
         self.assertEqual(self.laptop.on, True)
 
